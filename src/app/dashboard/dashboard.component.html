@@ -1,0 +1,76 @@
+<div *ngIf="data_Array && data_Array.length > 0; else noData"
+  
+  style="background-image: url('https://www.w3schools.com/w3css/img_lights.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            min-height: 100vh;  /* Ensures the div covers the full height of the viewport */
+            width: 100%; 
+            padding: 20px;" >
+
+ 
+
+<div >
+  <!-- <p style="background-color: black; color: white;">Welcome Dear {{ user_name }}</p> -->
+  <h2><p style="color: white; text-align: start;">Welcome Dear {{ user_name }}</p></h2>
+</div>
+  
+<!-- <div > -->
+  <table class="table table-striped"  style="background-color: rgba(255, 255, 255, 0.8); border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <thead>
+      <tr >
+       
+        <th style="background-color: aquamarine; border-style: groove;">Sr.No</th>
+        <!-- <th>ID</th> -->
+        <th style="background-color: aquamarine; border-style: groove;">Thought</th> <!-- Replace with actual column names from your data -->
+         <th style="background-color: aquamarine; border-style: groove;">Share on WhatsApp</th>
+       <th style="background-color: aquamarine; border-style: groove;">Action</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr *ngFor="let thought of data_Array; let i = index">
+       
+        <td>{{i + 1 }}</td> 
+      
+       
+        <!-- <td>{{ thought.id }}</td> -->
+        <td>{{ thought.thought }}</td>
+
+         <td>
+          <!-- WhatsApp share button -->
+          <button (click)="shareOnWhatsApp(thought.thought)">📲 Share </button>
+        </td>
+        
+         <!-- Edit link -->
+       <!-- <a href="app-edit-thought/{{thought.id}}"><td>Edit</td></a> -->
+         <a [routerLink]="['/app-edit-thought', thought.id]" class="btn btn-primary">Edit ✏️</a>&nbsp;
+       
+       <!-- <a href="app-edit-thought/{{thought.id}}"><td>Delete</td></a> -->
+       <button (click)="confirmDelete(thought.id)">Delete Record 🗑️</button>
+        
+       
+      </tr>
+    </tbody>
+  </table>
+<div *ngFor="let email of email_data">
+  <p>{{ email.username}}</p>
+  </div>
+</div>
+
+<!-- Display a message if there's no data -->
+<div 
+  
+  style="background-image: url('https://www.w3schools.com/w3css/img_lights.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            min-height: 100vh;  /* Ensures the div covers the full height of the viewport */
+            width: 100%; 
+            padding: 20px;">
+
+<ng-template #noData>
+  <h1><p>No thoughts available.</p></h1>
+</ng-template>
+</div>

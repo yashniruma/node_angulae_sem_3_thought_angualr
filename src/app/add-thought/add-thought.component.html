@@ -1,0 +1,43 @@
+<!-- <div style="background-image: url('https://www.w3schools.com/w3css/img_lights.jpg');  -->
+<div style="background-image: url('images/image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensures the div covers the full height of the viewport
+    */
+    width: 100%;
+    padding: 20px;">
+
+    <div class="container mt-4  ">
+
+        <!-- <div *ngIf="showAddForm"> -->
+        <div class="card" style="height: 390px;" >
+            <h1 style="color: aqua; background-color: black;"> ADD THOUGHT </h1>
+            <marquee style="color: blue;">#kisi ko dukh nahi dena he</marquee>
+            <br>
+            <!-- <form (submit)="save($event)"> -->
+            <form>
+                <div class="form-group">
+
+                    <input type="text" [(ngModel)]="thought"
+                        [ngModelOptions]="{standalone:true}"
+                        class="form-control" id="yname"
+                        placeholder="Enter Thought" style="height: 140px;">
+
+                </div>
+
+                <br>
+                <br>
+               
+                <button type="submit" class="btn btn-primary mt-4 form-control"
+                    (click)="save()">SAVE</button>
+                <!-- <button type="submit" class="btn btn-primary mt-4 form-control" >SAVE</button>  -->
+
+            </form>
+        </div><hr>
+        <!-- <p>Don't have an account? <a routerLink="/app-register">Register</a></p> -->
+        <hr>
+        <h3><p><a href="app-dashboard" style="color: black; background-color: aqua;  list-style: dashed;">Go To DASHBOARD </a></p></h3>
+    </div>
+
+</div>

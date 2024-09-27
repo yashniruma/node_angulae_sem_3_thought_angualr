@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="">Admin Login</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <!-- <a class="nav-link" href="#">Add  <span class="sr-only">(current)</span></a> -->
+        <a class="nav-link" href="#">#kisi ko dukh nahi dena he </a>
+       
+        
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="app-goal">Goal</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="app-allthought"> ALL THOUGHT </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="app-add-thought">ADD THOUGHT <b>&#43;</b></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="">ALL USER</a>
+      </li>
+    <!-- SELECT users.username, thoughts.thought 
+FROM users
+INNER JOIN thoughts ON users.id = thoughts.user_id; -->
+
+<!-- SELECT datanode3.email , thought3.thought FROM datanode3 INNER JOIN thought3 ON datanode3.id = thought3.user_id; -->
+
+<!-- UPDATE thought3 SET user_id = 1 WHERE id = 1; -->
+
+
+     <!-- Conditionally show Logout button if the user is logged in -->
+      <li class="nav-item" *ngIf="isLoggedIn()">
+        <a class="nav-link" href="javascript:void(0)" (click)="logout()">Logout</a>
+      </li>
+ 
+    </ul>
+    
+  </div>
+   <!-- <button *ngIf="isLoggedIn()" (click)="logout()">Logout</button> -->
+</nav>
+

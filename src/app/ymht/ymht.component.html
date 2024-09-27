@@ -1,0 +1,55 @@
+<div class="container mt-4">
+
+    <!-- <div *ngIf="showAddForm"> -->
+    <div class="card">
+        <h1>Ymht Register</h1>
+
+       <form>
+            <div class="form-group">
+                <label>Ymht Name </label>
+                <input type="text" [(ngModel)]="yname" [ngModelOptions]="{standalone:true}" class="form-control" id="yname" placeholder="Enter Name">
+            </div>
+            <div class="class form-group">
+                <label>Ymht SurName</label>
+                <input type="text" [(ngModel)]="ysurname" [ngModelOptions]="{standalone:true}" class="form-control" id="ysurname" placeholder="Enter SurName">
+            </div>
+            <div class="class form-group">
+                <label>ZID</label>
+                <input type="text" [(ngModel)]="zid" [ngModelOptions]="{standalone:true}" class="form-control" id="zid" placeholder="Enter ZID">
+            </div>
+            <br>
+            <hr>
+            <button type="submit" class="btn btn-primary mt-4" (click)="save()">SAVE</button> 
+        </form>
+    </div>
+</div>
+    <div class="container mt-4">
+        <h1>Ymth List</h1>
+        <table class="table">
+            <thead>
+                <h1 *ngIf="!isResultLoaded">Data Loading.......</h1>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">SurName</th>
+                    <th scope="col">ZID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let ydata of ymht_Array"> <!-- *ngfor its wrong declarations --> 
+                    <td>{{ ydata.yname }}</td>
+                    <td>{{ ydata.ysurname }}</td>
+                    <td>{{ ydata.zid }}</td>
+                    <td>
+                        <button type="submit" class="btn btn-success" (click)="setUpdate(ydata)">Edit</button>
+                        &nbsp;
+                        &nbsp;
+                        <button type="submit" class="btn btn-danger" (click)="setDelete(ydata)">Delete</button> 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<!-- </div> -->
+
+
+

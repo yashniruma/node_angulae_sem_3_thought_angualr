@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="app-register">Register</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <!-- <a class="nav-link" href="#">Add  <span class="sr-only">(current)</span></a> -->
+        
+       <a class="nav-link" href="https://www.dadabhagwan.in/path-to-happiness/relationship/learn-conflict-management-in-life/" target="_blank">#kisi ko dukh nahi dena he</a>
+
+        
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="app-aboutus">ABOUT</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="app-allthought"> ALL THOUGHT </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="app-add-thought">ADD THOUGHT <b>&#43;</b></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="app-dashboard">DASHBOARD</a>
+      </li>
+    <!-- SELECT users.username, thoughts.thought 
+FROM users
+INNER JOIN thoughts ON users.id = thoughts.user_id; -->
+
+<!-- SELECT datanode3.email , thought3.thought FROM datanode3 INNER JOIN thought3 ON datanode3.id = thought3.user_id; -->
+
+<!-- UPDATE thought3 SET user_id = 1 WHERE id = 1 -->
+
+
+     <!-- Conditionally show Logout button if the user is logged in -->
+      <li class="nav-item" *ngIf="isLoggedIn()">
+        <a class="nav-link" href="javascript:void(0)" (click)="logout()">Logout</a>
+      </li>
+ 
+    </ul>
+    
+  </div>
+   <!-- <button *ngIf="isLoggedIn()" (click)="logout()">Logout</button> -->
+</nav>
+
+<!--
+<form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+<nav>
+  <ul>
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/about">About</a></li>
+    
+  </ul>
+  <ul>
+<li><a routerLink="/contact">Contact</a></li>
+  </ul>
+</nav> -->

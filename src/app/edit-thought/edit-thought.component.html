@@ -1,0 +1,42 @@
+<div class="container mt-4">
+
+    <!-- <div *ngIf="showAddForm"> -->
+    <div class="card">
+    <u><h1> EDIT  YOUR THOUGHT </h1>    </u>
+    <marquee>#kisi ko dukh nahi dena he</marquee>
+<br>
+      
+       <form >
+            <div class="form-group">
+                
+                <!-- <input type="text" [(ngModel)]="thought" [ngModelOptions]="{standalone:true}" class="form-control" id="thought" name="thought" > -->
+
+                <input type="text" [(ngModel)]="thought" [ngModelOptions]="{standalone:true}" class="form-control" id="thought" name="thought">
+              
+                <!-- <input type="text"  class="form-control" id="yname" placeholder="Enter Thought"> -->
+             
+                <!-- <input type="text" id="thought" [(ngModel)]="thought_Array" [ngModelOptions]="{standalone:true}" name="thought"> -->
+            </div>
+           
+<br>  
+            <br>
+            <hr>
+
+            <!-- <button type="submit" class="btn btn-primary mt-4 form-control" (click)="save()">SAVE</button>  -->
+            <button type="submit" class="btn btn-primary mt-4 form-control" (click)="save()">SAVE</button> 
+               
+        </form>
+    </div><hr>
+    <!-- <p>Don't have an account? <a routerLink="/app-register">Register</a></p> -->
+      <p><a href="app-dashboard">Go To DASHBOARD </a></p>
+</div>
+   
+
+
+
+<!-- //  why aaray  not work 
+
+ The issue you're facing is because this.thought_Array is being assigned an array (res.data.thought), but in your HTML, you're trying to bind it to an input field, which expects a string or a single value, not an array.
+
+If res.data.thought contains the actual thought text, you should bind that to a variable that holds a string, not an array. -->
+

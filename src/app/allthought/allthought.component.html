@@ -1,0 +1,53 @@
+<!-- <div *ngIf="data_Array && data_Array.length > 0; else noData" class="table-container"> -->
+<!-- <div *ngIf="data_Array && data_Array.length > 0; else noData" style="background-color: #f9f9f9; padding: 20px; border-radius: 10px;"> -->
+
+<div style="background-image: url('https://www.w3schools.com/w3css/img_lights.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            min-height: 100vh;  /* Ensures the div covers the full height of the viewport */
+            width: 100%; 
+            padding: 20px;">
+  <!-- This is a test for the background image -->
+  <!-- <div style="background-image: url('https://images.unsplash.com/photo-1234567890abcdef'); background-size: cover; background-position: center;"></div> -->
+
+  <table class="table table-striped">
+    <!-- <thead style="background-color: black !important;"> -->
+    <thead >
+      <tr >
+        <th style="background-color: aquamarine; border-style: groove;">Sr.No</th>
+        <th style="background-color: aquamarine; border-style: groove;">Thought</th> 
+        <th style="background-color: aquamarine; border-style: groove;">Like 👍</th>
+        <th style="background-color: aquamarine; border-style: groove;">Like Button</th>
+         <th style="background-color: aquamarine; border-style: groove;">Share on WhatsApp</th>
+       <!-- <th>Like</th> -->
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let thought of data_Array; let i = index">
+        <td>{{ i + 1 }}</td> <!-- Display index number -->
+        <td>{{ thought.thought }}</td> 
+        
+        <!-- <td>{{ thought.description }}</td>
+        <td>{{ thought.created_at | date: 'short' }}</td> Format date if needed -->
+
+           <td>{{ thought.likes }}</td> <!-- Display the like count -->
+        <td>
+          <button (click)="likeThought(thought.id)">👍 Like</button> <!-- Like button -->
+        </td>
+
+        <td>
+          <!-- WhatsApp share button -->
+          <button (click)="shareOnWhatsApp(thought.thought)">📲 Share </button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Display a message if there's no data -->
+<ng-template #noData>
+  <p>No thoughts available.</p>
+</ng-template>

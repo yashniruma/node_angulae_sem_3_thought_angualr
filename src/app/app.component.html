@@ -1,13 +1,28 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- <router-outlet></router-outlet> -->
 
-<style>
+
+<!-- <app-nav-bar></app-nav-bar> 
+ 
+
+<app-login></app-login> 
+ -->
+
+<!-- <app-register></app-register>
+<app-ymht></app-ymht> -->
+
+<!-- 
+<app-navbar (addButtonClicked)="handleAddButtonClick()"></app-navbar>
+<app-ymht [showAddForm]="showAddForm"></app-ymht> -->
+
+<!-- <app-navbar (addClick)="toggleAddForm()"></app-navbar> -->
+<!-- <app-navbar (addClick)="ymhtComponent.toggleAddForm()"></app-navbar> -->
+<!-- <app-ymht #ymhtComponent></app-ymht> -->
+
+<!-- <app-navbar (addClick)="onAddClick()"></app-navbar> -->
+<!-- <app-ymht></app-ymht> -->
+
+
+<!-- <style>
   :host {
     --bright-blue: oklch(51.01% 0.274 263.83);
     --electric-violet: oklch(53.18% 0.28 296.97);
@@ -322,15 +337,33 @@
       </div>
     </div>
   </div>
-</main>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+</main> -->
 
 
+
+<!-- Conditionally display the navbar based on the role -->
+
+<!-- <nav *ngIf="window.sessionStorage.getItem('role') === 'admin'">
+<nav *ngIf="getRole() === 'admin'">
+  <adminnavbar></adminnavbar>
+</nav> -->
+
+
+<!-- <nav *ngIf="sessionStorage.getItem('role') !== 'admin'">
+<nav *ngIf="getRole() !== 'admin'">
+  <app-nav-bar></app-nav-bar>
+</nav> -->
+
+
+<!-- <nav *ngIf="isAdmin()">
+  <adminnavbar></adminnavbar> -->
+  <!-- <alluser></alluser> -->
+  <!-- <app-goal></app-goal> -->
+<!-- </nav> -->
+
+<!-- <nav *ngIf="isNotAdmin()">
+  <app-nav-bar></app-nav-bar>
+</nav> -->
+
+<app-nav-bar></app-nav-bar>
 <router-outlet />
