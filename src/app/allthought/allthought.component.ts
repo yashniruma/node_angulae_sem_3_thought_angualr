@@ -29,7 +29,7 @@ export class AllthoughtComponent implements OnInit{
   }
 
   all_thought() {
-    this.http.post("http://localhost:8086/api/all/thought", {}).subscribe((res: any) => {
+    this.http.post("https://www.freesqldatabase.com/api/all/thought", {}).subscribe((res: any) => {
       console.log(res);
 
       if (res.status) {
